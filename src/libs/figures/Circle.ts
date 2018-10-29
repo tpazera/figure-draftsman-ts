@@ -6,10 +6,12 @@ class Circle implements Figure, Shape2D {
 
     private center:Point;
     private radius:number;
+    private fillColor:string;
 
-    public constructor(center:Point, radius:number) {
+    public constructor(center:Point, radius:number, fillColor:string) {
         this.center = center;
         this.radius = radius;
+        this.fillColor = fillColor;
     }
 
     public getArea():number {
@@ -26,6 +28,10 @@ class Circle implements Figure, Shape2D {
 
     public getRadius():number {
         return this.radius;
+    }
+
+    public getFillColor():string {
+        return this.fillColor;
     }
 }
 

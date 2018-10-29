@@ -10,8 +10,9 @@ class FigureDrawer {
     }
 
     public drawFigures(list:Array<Figure>):void {
+        let view:View = this.view;
         list.forEach(function (shape:Figure) {
-            this.view.draw(shape);
+            view.draw(shape);
         });
     }
 }

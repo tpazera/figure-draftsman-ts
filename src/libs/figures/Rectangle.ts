@@ -8,11 +8,13 @@ class Rectangle implements Figure, Shape2D {
     private point:Point;
     private height:number;
     private width:number;
+    private fillColor:string;
 
-    public constructor(point:Point, height:number, width:number) {
+    public constructor(point:Point, height:number, width:number, fillColor:string) {
         this.point = point;
         this.height = height;
         this.width = width;
+        this.fillColor = fillColor;
     }
 
     public getPoint():Point {
@@ -33,6 +35,10 @@ class Rectangle implements Figure, Shape2D {
 
     public getPerimeter():number {
         return this.width*2 + this.height*2;
+    }
+
+    public getFillColor():string {
+        return this.fillColor;
     }
 }
 

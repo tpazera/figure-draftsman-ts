@@ -17,8 +17,13 @@ class DrawCircle extends AbstractView {
     public draw(figure:Figure):void {
         if(figure instanceof Circle) {
             let circle:Circle = figure as Circle;
-            //this.context.setFill(Color.BLUE);
-            //this.context.fillOval(circle.getCenter().getX(), circle.getCenter().getY(), circle.getRadius()*2, circle.getRadius()*2);
+            this.context.beginPath();
+            this.context.arc(figure.getCenter().getX(), figure.getCenter().getY(), figure.getRadius(), 0, 2*Math.PI);
+            this.context.fillStyle = figure.getFillColor();
+            this.context.fill();
+            this.context.lineWidth = 1;
+            this.context.strokeStyle = figure.getFillColor();
+            this.context.stroke();
 
         } else {
             this.view.draw(figure);

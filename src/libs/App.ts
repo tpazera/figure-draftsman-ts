@@ -1,4 +1,4 @@
-import { ParserTxt } from './parsers/ParserTxt';
+import { ParserJSON } from './parsers/ParserJSON';
 import { Figure } from './figures/Figure';
 import { FigureDrawer } from './drawings/FigureDrawer';
 import { DrawLine } from './drawings/DrawLine';
@@ -8,10 +8,16 @@ import { DrawRectangle } from './drawings/DrawRectangle';
 let start = "Loading ts..."
 console.log(start);
 
-let home = <HTMLCanvasElement> document.getElementById("mainCanvas");
-let context = home.getContext("2d");
+function startDrawing():void {
+    let home = <HTMLCanvasElement> document.getElementById("mainCanvas");
+    let context = home.getContext("2d");
+    
+    let parserJSON:ParserJSON = new ParserJSON();
+    let figuresArray:Figure[] = parserJSON.getData("./resources/figures.txt");
+    console.log(figuresArray);
+    let figureDrawer:FigureDrawer = new FigureDrawer(new DrawLine(context, new DrawCircle(context, new DrawRectangle(context, null))))
+    
+    figureDrawer.drawFigures(figuresArray);
+}
 
-let parserTxt:ParserTxt = new ParserTxt();
-let figuresArray:Figure[] = parserTxt.getData("test");
-let figureDrawer:FigureDrawer = new FigureDrawer(new DrawLine(context, new DrawCircle(context, new DrawRectangle(context, null))))
-console.log(figuresArray.length);
+export { startDrawing };

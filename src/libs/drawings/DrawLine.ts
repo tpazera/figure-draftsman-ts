@@ -17,10 +17,12 @@ class DrawLine extends AbstractView {
     public draw(figure:Figure):void {
         if(figure instanceof Line) {
             let line:Line = figure as Line;
-            //this.context.setStroke(Color.RED);
-            //this.context.setLineWidth(3);
-            //this.context.strokeLine(line.getStart().getX(), line.getStart().getY(), line.getEnd().getX(), line.getEnd().getY());
-
+            this.context.beginPath();
+            this.context.moveTo(figure.getStart().getX(), figure.getStart().getY());
+            this.context.lineTo(figure.getEnd().getX(), figure.getEnd().getY());
+            this.context.lineWidth = figure.getLineWidth();
+            this.context.strokeStyle = figure.getLineColor();
+            this.context.stroke();
         } else {
             this.view.draw(figure);
         }

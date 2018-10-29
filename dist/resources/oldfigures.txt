@@ -1,0 +1,75 @@
+{
+	"figures": {
+		"line": [{
+				"startX": 50,
+				"startY": 50,
+				"endX": 500,
+				"endY": 500,
+				"lineWidth": 3,
+				"lineColor": "red"
+			},
+			{
+				"startX": 500,
+				"startY": 500,
+				"endX": 50,
+				"endY": 500,
+				"lineWidth": 7,
+				"lineColor": "blue"
+			},
+			{
+				"startX": 50,
+				"startY": 500,
+				"endX": 50,
+				"endY": 50,
+				"lineWidth": 10,
+				"lineColor": "green"
+			}
+		],
+		"rectangle": [{
+				"startX": 200,
+				"startY": 200,
+				"width": 700,
+				"height": 400,
+				"fillColor": "aqua"
+			},
+			{
+				"startX": 400,
+				"startY": 400,
+				"width": 500,
+				"height": 500,
+				"fillColor": "black"
+			}
+		],
+		"circle": [{
+			"centerX": 300,
+			"centerY": 300,
+			"radius": 250,
+			"fillColor": "grey"
+		}],
+        "line": [{
+				"startX": 50,
+				"startY": 50,
+				"endX": 500,
+				"endY": 500,
+				"lineWidth": 3,
+				"lineColor": "red"
+			},
+			{
+				"startX": 500,
+				"startY": 500,
+				"endX": 50,
+				"endY": 500,
+				"lineWidth": 7,
+				"lineColor": "blue"
+			},
+			{
+				"startX": 50,
+				"startY": 500,
+				"endX": 50,
+				"endY": 50,
+				"lineWidth": 10,
+				"lineColor": "green"
+			}
+		]
+	}
+}

@@ -17,9 +17,13 @@ class DrawRectangle extends AbstractView {
     public draw(figure:Figure):void {
         if(figure instanceof Rectangle) {
             let line:Rectangle = figure as Rectangle;
-            // this.context.setFill(Color.GREEN);
-            // this.context.fillRect(rectangle.getPoint().getX(), rectangle.getPoint().getY(), rectangle.getWidth(), rectangle.getHeight());
-
+            this.context.beginPath();
+            this.context.rect(figure.getPoint().getX(), figure.getPoint().getY(), figure.getWidth(), figure.getHeight());
+            this.context.fillStyle = figure.getFillColor();
+            this.context.fill();
+            this.context.lineWidth = 1;
+            this.context.strokeStyle = figure.getFillColor();
+            this.context.stroke();
         } else {
             this.view.draw(figure);
         }
