@@ -1,0 +1,5 @@
+interface Figure {
+
+}
+
+export { Figure };
